@@ -1,7 +1,7 @@
 arithmetic/.idea/
 arithmetic/out/
 arithmetic.iml
-
+*.xml
 *.class
 
 
