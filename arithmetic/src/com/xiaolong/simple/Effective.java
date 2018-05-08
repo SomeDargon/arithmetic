@@ -12,7 +12,7 @@ package com.xiaolong.simple;
  *          输出: true
  */
 public class Effective  {
-    
+
     public boolean isValid(String s) {
        char[] chars = s.toCharArray(), schars = new char[s.length()];
        int top = 0, len = s.length();
@@ -23,10 +23,12 @@ public class Effective  {
                 schars[top++]='}';
             }else if(chars[i]=='['){
                 schars[top++]=']';
+                //判断是否和前一个相等,如果top等于表示(){}}这种情况
             }else if(0==top||schars[--top]!=chars[i]){
                 return false;
             }
        }
+        //等于0了说明都匹配完了。
        return top==0;
     }
 
