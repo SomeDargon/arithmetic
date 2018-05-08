@@ -9,7 +9,7 @@
 ### 简单题
 
 
-* [有效的括号](https://github.com/SomeDargon/arithmetic/blob/master/arithmetic/src/com/xiaolong/simple/Effective.java)
+* [有效的括号](https://github.com/SomeDargon/arithmetic/blob/master/arithmetic/Effective.md)
 
 ***
 
