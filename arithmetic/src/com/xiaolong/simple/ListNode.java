@@ -19,44 +19,20 @@ public class ListNode {
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-
         //这里很简单，如果那个为空，就返回对应的那个
         if(l1==null) {return l2;}
         if(l2==null) {return l1;}
-
         //连接第一个头部
         ListNode oldList = l1, newList = l2 , head , o;
-
         //这里是为了获取头结点， 那个小那个就放在前面
         if(oldList.val >= newList.val){
-            head = o = newList;
+            head = newList;
             newList = newList.next;
+            head.next = mergeTwoLists(oldList, newList);
         }else {
-            head = o = oldList;
+            head = oldList;
             oldList = oldList.next;
-        }
-        while (oldList!=null && newList!=null){
-            if(oldList.val>newList.val){
-                //这注意一下.三个步骤
-                //1.先把最小的那个，放到自定义链表o的下一个
-                //2.然后保证o指向的是最后一个节点
-                //3.最后把小的那个节点指向下一个
-                o = o.next = newList;
-                newList = newList.next;
-            }else {
-                o = o.next = oldList;
-                oldList = oldList.next;
-            }
-        }
-
-        //最后是遍历没有遍历完的，直接添加到后面去
-        while (oldList != null){
-            o = o.next = oldList;
-            oldList = oldList.next;
-        }
-        while (newList != null){
-            o = o.next = newList;
-            newList = newList.next;
+            head.next = mergeTwoLists(oldList, newList);
         }
         return head;
     }
