@@ -40,7 +40,7 @@
 错误的例子 : 
 	
 	当输入"({)}"的时候，前两个会转换成")}"当输入第三个的时候就会和前面判断结果是错的
-[程序代码](https://github.com/waylau/netty-4-user-guide/blob/master/SUMMARY.md)
+[程序代码](https://github.com/SomeDargon/arithmetic/blob/master/arithmetic/src/com/xiaolong/simple/Effective.java)
 
     
 
