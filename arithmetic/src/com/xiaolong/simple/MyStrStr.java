@@ -11,6 +11,7 @@ package com.xiaolong.simple;
  * 示例 2:
  *      输入: haystack = "aaaaa", needle = "bba"
  *      输出: -1
+ *      其实可以直接用indexOf
  */
 public class MyStrStr {
 
@@ -22,7 +23,7 @@ public class MyStrStr {
             return -1;
         }
         int hlen = haystack.length(), nlen = needle.length();
-        for (int i=0; i<hlen - nlen; i++){
+        for (int i=0; i<hlen - nlen + 1; i++){
             if (haystack.substring(i, i+nlen).equals(needle)){
                 return i;
             }
@@ -32,6 +33,6 @@ public class MyStrStr {
 
     public static void main(String[] args) {
         MyStrStr myStrStr = new MyStrStr();
-        System.out.println(myStrStr.strStr("hello", "ll"));
+        System.out.println(myStrStr.strStr("a", "a"));
     }
 }
